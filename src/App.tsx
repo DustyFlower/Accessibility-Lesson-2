@@ -5,14 +5,15 @@ import styled, {keyframes} from 'styled-components';
 const Navigation = () => {
     return (
         <nav>
-            <Menu role={'menuitem'}> {/*указывает конкретное значение/роль элемента*/}
-                <MenuItem>
+            <Menu role={'menubar'}> {/*указывает конкретное значение/роль элемента*/}
+                <MenuItem role={'menuitem'}> {/*эта роль только для элемента внутри меню, только для li*/}
                     <a href="#">Item 1</a>
                 </MenuItem>
-                <MenuItem aria-hidden={true}> {/*скрывает информацию от скрин ридера*/}
+                {/*<MenuItem aria-hidden={true}>*/} {/*скрывает информацию от скрин ридера*/}
+                <MenuItem role={'menuitem'}>
                     <a href="#">Item 2</a>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem role={'menuitem'}>
                     <a href="#">Item 3</a>
                 </MenuItem>
             </Menu>
@@ -72,7 +73,7 @@ const Title = styled.h1`
 
 const Header = styled.header`
     height: 80px;
-    background-color: #e91e63;
+    background-color: #3f51b5;
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -15,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) { /*отключает анимацию там (у тех пользователей), где анимация отключена в системе*/
   *,
   ::before,
   ::after {
